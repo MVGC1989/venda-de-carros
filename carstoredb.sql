@@ -1,8 +1,8 @@
 DROP SCHEMA public CASCADE;
 CREATE SCHEMA public;
 
-DROP DATABASE IF EXISTS launchstoredb; -- verificar se a tabela existe
-CREATE DATABASE launchstoredb; -- criar um db
+DROP DATABASE IF EXISTS carstoredb; -- verificar se a tabela existe
+CREATE DATABASE carstoredb; -- criar um db
 
 
 CREATE TABLE "products" (

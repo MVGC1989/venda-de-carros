@@ -1,0 +1,70 @@
+<header>
+    <div class="container">
+        <form class="search"  method="GET" action="/products/search">
+        <button >
+            <i class="material-icons">search</i>
+        </button>
+            <input 
+                type="text" 
+                name="filter" 
+                placeholder="Buscar por produtos..."
+                {% if search.term %}
+                    value="{{search.term}}"
+                {% endif %}
+                >
+        </form>
+        <a href="/">
+            <div class="logo">
+                <h1>LaunchStore</h1>
+                <h2>Compra e Venda</h2>
+            </div>
+        </a>
+        <nav class="primary">
+            <ul>
+                <li>
+                    <a href="/ads/create">
+                        <i class="material-icons">add</i>
+                        Novo Anúncio
+                    </a>
+                </li>
+
+                <li class="accounts">
+                    <a href="/accounts">
+                        <i class="material-icons">account_circle</i>
+                        Minha Conta
+                    </a>
+                    {%if session.userId %}
+                    <ul class="submenu">
+                        <li>
+                            <a href="/users">Minha Conta</a>
+                        </li>
+                        <li>
+                            <a href="/users/ads">Meus Anúncios</a>
+                        </li>
+                        <li>
+                            <a href="/orders">Meus Pedidos</a>
+                        </li>
+                        <li>
+                            <a href="/orders/sales">Minhas Vendas</a>
+                        </li>
+                        <li>
+                            <form action="/users/logout" method="post">
+                                <button>Sair</button>
+                            </form>
+                        </li>
+                    </ul>
+                    {% endif %}
+                </li>
+                <li class="cart">
+                    <a href="/cart">
+                        <i class="material-icons">shopping_cart</i>
+                        {%if (session.cart) and (session.cart.total.quantity > 0)%}
+                            <span id="cart-status-info">{{session.cart.total.quantity}}</span>
+                        {% endif %}
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>

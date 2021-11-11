@@ -75,21 +75,14 @@ module.exports = {
 
     async put(req , res){//PROBLEMA COM INPUT HIDDEN NA HORA DE ATUALIZAR
         try {
-
-            if (req.files.length != 0) {
-                const newFilesPromise = req.files.map(file => {
-                    File.create({ ...file, product_id: req.body.id })
-                });
-
-                await Promise.all(newFilesPromise)
-            }
-
             if(req.body.removed_files){//removendo foto
                 const removedFiles = req.body.removed_files.split(",")
                 const last_index = removedFiles.length -1
                 removedFiles.splice(last_index, 1)
                 
-                const removed_files_promise = removedFiles.map(id => File.delete(id))
+                const removed_files_promise = removedFiles.map(id => {
+                    File.delete(id)
+                })
                     await Promise.all(removed_files_promise)
             }
     

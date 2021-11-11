@@ -22,7 +22,7 @@ const email = (seller, product, buyer) => `
 <p><br/><br/></p>
 <p><strong>Entre em contato com o comprador para finalizar a venda.</strong></p>
 <p><br/><br/></p>
-<p>Atenciosamente, Equipe LaunchStore.</p>
+<p>Atenciosamente, Equipe The Car Shop.</p>
 `
 
 module.exports = {

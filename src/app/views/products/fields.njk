@@ -70,7 +70,7 @@ accept --> aceita todo tipo de imagem #}
             <input 
                 type="text" 
                 name="price"
-                placeholder="Digite o preço do produto..."
+                placeholder="Digite o preço..."
                 value="{{product.formattedPrice}}"
                 onkeydown= "Mask.apply(this, 'formatBRL')"> 
         </div>
@@ -80,12 +80,12 @@ accept --> aceita todo tipo de imagem #}
 </div>
 
 <div class="item">
-    <div>Quantidade</div>
+    <div>Ano</div>
         <div> 
             <input 
                 type="number" 
                 name="quantity"
-                placeholder="Estoque disponível..."
+                placeholder="Ano/modelo..."
                 value="{{product.quantity}}"> 
         </div>
 </div>

@@ -24,9 +24,9 @@ CREATE TABLE "categories" (
   "name" text NOT NULL
 );
 
-INSERT INTO categories(name) VALUES ('comida');
-INSERT INTO categories(name) VALUES ('eletrônicos');
-INSERT INTO categories(name) VALUES ('automóveis');
+INSERT INTO categories(name) VALUES ('Caminhões');
+INSERT INTO categories(name) VALUES ('Motocicletas');
+INSERT INTO categories(name) VALUES ('Automóveis');
 
 CREATE TABLE "files" (
   "id" SERIAL PRIMARY KEY,

@@ -5,7 +5,7 @@
 {% block content %}
     {% call card.render('Editar Produto', 'product-create container')%}
 
-        <form  method="POST" action="/products?_method=PUT" enctype="multipart/form-data">
+        <form  method="POST" class="formSubmit" action="/products?_method=PUT" enctype="multipart/form-data">
             <div class="fields">
                 {% include "products/fields.njk" %}
                 <input 
